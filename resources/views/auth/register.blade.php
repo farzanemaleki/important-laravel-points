@@ -5,6 +5,7 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-8">
+        @include('partials.alerts')
         <div class="card">
             <div class="card-header">
                 @lang('auth.register user')
@@ -46,6 +47,9 @@
                             <input value="{{old('phone_number')}}" name="phone_number" type="tel" class="form-control" id="phone_number"
                                 placeholder="@lang('auth.enter your phone number')">
                         </div>
+                    </div>
+                    <div class="offset-sm-3">
+                        @include('partials.validation-errors')
                     </div>
                     <button type="submit" class="btn btn-primary">@lang('auth.register')</button>
                 </form>

@@ -9,11 +9,11 @@
     </button>
     <div class="auth-btn collapse justify-content-end navbar-collapse">
         @guest
-    <a class="btn btn-info  mr-2" href="">@lang('public.login')</a>
-    <a class="btn btn-info mr-2" href="">@lang('public.register')</a>
+            <a class="btn btn-info  mr-2" href="">@lang('public.login')</a>
+            <a class="btn btn-info mr-2" href="">@lang('public.register')</a>
         @endguest
         @auth
- <ul class="navbar-nav">
+        <ul class="navbar-nav">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -23,8 +23,8 @@
                 <a href="{{route('auth.two.factor.toggle.form')}}" class="dropdown-item">@lang('auth.two factor authentication')</a>
                 {{-- <a class="dropdown-item" href="{{route('auth.logout')}}">@lang('auth.logout')</a> --}}
                 </div>
-       </li>
-</ul>
+            </li>
+        </ul>
         @endauth
     </div>
 </nav>
