@@ -155,65 +155,42 @@ return [
         'digits' => ':attribute باید :digits رقم باشد.',
         'numeric' => ':attribute باید به صورت عددی باشد.',
 
-
-        'attributes' => [
-            'email_type' => 'نوع ایمیل',
-            'user' => 'کاربر',
-            'text' => 'متن پیام کوتاه',
-            'name' => 'نام',
-            'email' => 'ایمیل',
-            'phone_number' => 'شماره تلفن',
-            'password_confirmation' => 'تایید کلمه عبور',
-            'password' => 'کلمه عبور',
-            'token' => 'توکن',
-            'code' => 'کد'
-
-        ]
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap attribute place-holders
-    | with something more reader friendly such as E-Mail Address instead
-    | of "email". This simply helps us make messages a little cleaner.
-    |
-    */
     'attributes' => [
-        "name" => "نام",
-        "username" => "نام کاربری",
-        "email" => "پست الکترونیکی",
-        "first_name" => "نام",
-        "last_name" => "نام خانوادگی",
-        "family" => "نام خانوادگی",
-        "password" => "رمز عبور",
-        "password_confirmation" => "تاییدیه ی رمز عبور",
-        "city" => "شهر",
-        "country" => "کشور",
-        "address" => "نشانی",
-        "phone" => "تلفن",
-        "mobile" => "تلفن همراه",
-        "age" => "سن",
-        "sex" => "جنسیت",
-        "gender" => "جنسیت",
-        "day" => "روز",
-        "month" => "ماه",
-        "year" => "سال",
-        "hour" => "ساعت",
-        "minute" => "دقیقه",
-        "second" => "ثانیه",
-        "title" => "عنوان",
-        "text" => "متن",
-        "content" => "محتوا",
-        "description" => "توضیحات",
-        "excerpt" => "گلچین کردن",
-        "date" => "تاریخ",
-        "time" => "زمان",
-        "available" => "موجود",
-        "size" => "اندازه",
-		"file" => "فایل",
-		"fullname" => "نام کامل"
+            "name" => "نام",
+            "username" => "نام کاربری",
+            "email" => "پست الکترونیکی",
+            'phone_number' => 'شماره موبایل',
+            "first_name" => "نام",
+            "last_name" => "نام خانوادگی",
+            "family" => "نام خانوادگی",
+            "password" => "رمز عبور",
+            "password_confirmation" => "تاییدیه ی رمز عبور",
+            "city" => "شهر",
+            "country" => "کشور",
+            "address" => "نشانی",
+            "phone" => "تلفن",
+            "mobile" => "تلفن همراه",
+            "age" => "سن",
+            "sex" => "جنسیت",
+            "gender" => "جنسیت",
+            "day" => "روز",
+            "month" => "ماه",
+            "year" => "سال",
+            "hour" => "ساعت",
+            "minute" => "دقیقه",
+            "second" => "ثانیه",
+            "title" => "عنوان",
+            "text" => "متن",
+            "content" => "محتوا",
+            "description" => "توضیحات",
+            "excerpt" => "گلچین کردن",
+            "date" => "تاریخ",
+            "time" => "زمان",
+            "available" => "موجود",
+            "size" => "اندازه",
+            "file" => "فایل",
+            "fullname" => "نام کامل"
+        ],
     ],
+
 ];

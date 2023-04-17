@@ -11,10 +11,10 @@
                 @lang('auth.register user')
             </div>
             <div class="card-body">
-            <form method="POST" action="">
+            <form method="POST" action="{{route('auth.register')}}">
                 @csrf
                     <div class="form-group row">
-                        <label class="col-sm-3 col-form-label" for="email">{{__('auth.email')}}</label>
+                        <label class="col-sm-3 col-form-label" for="email">@lang('auth.email')</label>
                         <div class="col-sm-9">
                         <input type="email" name="email" class="form-control" id="email" value="{{old('email')}}"
                                 aria-describedby="emailHelp" placeholder="@lang('auth.enter your email')">

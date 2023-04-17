@@ -1,3 +1,9 @@
+@if(session('registerd'))
+    <div class="alert alert-success">
+        {{__('auth.your registration was successful')}}
+    </div>
+@endif
+
 @if(session('success'))
     <div class="alert alert-success">
         {{__('alert.Successfuly Done. ')}}
