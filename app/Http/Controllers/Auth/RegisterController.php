@@ -37,7 +37,7 @@ class RegisterController extends Controller
         
     }
 
-    private function validateForm(Request $request){
+    protected function validateForm(Request $request){
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -46,6 +46,4 @@ class RegisterController extends Controller
         ]);
     }
 
-
-    
 }

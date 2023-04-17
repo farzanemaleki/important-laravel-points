@@ -1,17 +1,11 @@
-@if(session('registerd'))
-    <div class="alert alert-success">
-        {{__('auth.your registration was successful')}}
-    </div>
+@if (session('registered'))
+<div class="alert alert-success">
+    @lang('auth.your registration was successful')
+</div>
 @endif
-
-@if(session('success'))
-    <div class="alert alert-success">
-        {{__('alert.Successfuly Done. ')}}
-    </div>
-@endif
-
-@if (session('failed'))
-    <div class="alert alert-danger">
-        {{__('alert.Somthing gets wrong, try again. ')}}
-    </div>
+    
+@if (session('wrongCredentials'))
+<div class="alert alert-danger">
+    @lang('auth.user or password was wrong')
+</div>
 @endif
