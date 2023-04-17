@@ -1,16 +1,16 @@
 # Let's Start Coding Step by Step
 
-1. Make the login and register UI.
-3. Write `php artisan publish:lang` in the cmd then add fa and en and ... languages folders.
-2. For supporting localization, we use `@lang('')` or `{{__('')}}` for static content of the website.
-3. To show errors, make a blade file in the partials folder named `validation-errors.blade.php`. Use the following code:
-        `@if($errors->any())
-            @foreach($errors->all() as $error)
-            ...
-            @endforeach
-        @endif`
-4. To show alerts, make a blade file in the partials folder named `alert.blade.php`.
-5. Use `@guest` and `@auth` for the login/register navbar button.
+    1. Make the login and register UI.
+    3. Write `php artisan publish:lang` in the cmd then add fa and en and ... languages folders.
+    2. For supporting localization, we use `@lang('')` or `{{__('')}}` for static content of the website.
+    3. To show errors, make a blade file in the partials folder named `validation-errors.blade.php`. Use the following code:
+            `@if($errors->any())
+                @foreach($errors->all() as $error)
+                ...
+                @endforeach
+            @endif`
+    4. To show alerts, make a blade file in the partials folder named `alert.blade.php`.
+    5. Use `@guest` and `@auth` for the login/register navbar button.
 
 ## Now Start the Register System
     
@@ -36,7 +36,7 @@
                 If it's false, redirect back with an error message stored in a session.
                 3. When a user logs in a session created for user security should generate a seprate session in every log in with `session->regenerate()` function.
  
-    - Logout
+## Logout
         . Add a route to web.php and use Auth::logout() in the logout method of the LoginController.
         . It's also better to invalidate the user session with session->invalidate().
 
@@ -69,3 +69,23 @@
             `RateLimiter::hit($this->throttleKey($request), $seconds = 60);`
 
 
+## Verify User Email
+    
+    - First, we want to show an alert to users who haven't verified their email addresses.
+    - Create a middleware `php artisan make:middleware CheckEmailStatus` 
+    - The `User` class extends `Authenticatable`, which uses the `MustVerifyEmail` trait. This trait provides the `hasVerifiedEmail` function, which we will use in the middleware. Add the following code to the `handle` method of the middleware:
+        `if($request->user() && !$request->user()->hasVerifiedEmail()){
+            session()->flash('mustVerifyEmail', true);
+        }`  
+    - We will now add the session to the layout so that the alert is shown on every page. Add the following code to `app.blade.php`:
+    - Finally, we need to add the middleware to the web group in `app/Http/Kernel.php`:
+        `protected $middlewareGroups = [
+            'web' => [
+                // Other middleware...
+                \App\Http\Middleware\CheckEmailStatus::class,
+            ],
+        ];`
+
+
+
+        
